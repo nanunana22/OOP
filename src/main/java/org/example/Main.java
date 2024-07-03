@@ -1,17 +1,25 @@
 package org.example;
+//Schritt 1: Erstellen Sie eine Klasse 'Book' mit den Eigenschaften 'title', 'author', und 'isbn'. #
+// Implementieren Sie Getter- und Setter-Methoden für diese Eigenschaften.
+//
+//Schritt 2: Überschreiben Sie die Methode toString der Klasse "Book", um die Buchinformationen in einem lesbaren Format anzuzeigen.
+//
+//Schritt 3: Erstellen Sie eine Klasse 'Library' mit einem Array von 'Book'-Objekten.
+//Schritt 4: Überschreiben Sie die toString-Methode der Klasse "Library", um die Informationen der "Library" in einem lesbaren Format anzuzeigen.
+//
+//Schritt 5: Erstellen Sie eine Instanz der 'Library'-Klasse mit einem Array von 'Book'-Objekten. Geben Sie die Bibliotheksinformationen auf der Konsole aus.
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Book myBook = new Book();
+        System.out.println(myBook);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Book[] myBooks = new Book[3];
+        myBooks[0] = myBook;
+        myBooks[1] = myBook;
+        myBooks[2] = myBook;
+
+        Library myLibrary = new Library(myBooks);
+        System.out.println(myLibrary);
     }
 }
